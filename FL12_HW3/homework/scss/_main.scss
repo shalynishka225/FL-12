@@ -1,0 +1,127 @@
+@mixin join-btn {
+  padding: 10px 30px;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  background-color: $btn-color;
+  color: $bg-color;
+  border: none;
+  border-radius: 3px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: map-get($font-family, header), sans-serif;
+  color: rgba(14, 14, 14, 0.667);
+}
+
+header{
+  background-image: $bg-image;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  border-bottom-right-radius: 700px 250px;
+
+  .header-wrap {
+    height: 700px;
+    padding: 15px 0 0 180px;
+    width: 500px;
+  }
+
+  .landing-logo {
+    display: flex;
+
+    p {
+      margin-left: 10px;
+      font-size: 25px;
+      font-weight: $font-weight;
+      font-family: map-get($font-family,body);
+      display: flex;
+      flex-direction: column;
+    }
+
+    span{
+      font-size: 10px;
+      margin: 0 auto;
+      font-size: 11px;
+      line-height: 0;
+    }
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  } 
+
+  .header_heading {
+    margin: 30px 0 30px 0;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1;
+
+    &::before {
+      content: 'awesome';
+      background-color: $bg-content;
+      padding-bottom: 17px;
+      line-height: 0.4;
+      position: absolute;
+      top: 156px;
+    }
+  }
+
+  .header_text {
+    text-align: left;
+    width: 560px;
+    font-family: map-get($font-family, body);
+    margin-bottom: 40px;
+  }
+
+  .header_button {
+    @include join-btn;
+  }
+
+  .login {
+    padding-left: 100px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: $font-weight;
+  }
+
+}
+
+.section_text {
+  color: $main-text-color;
+  font-size: 30px;
+  font-weight: $font-weight;
+  text-align: center;
+  padding-top: 20px;
+
+  &::before{
+    background-color: $bg-content;
+    content: 'adventure';
+    position: absolute;
+    bottom: -30px;
+    left: 960px;
+    padding-top: 12px;
+    line-height: 1;
+  }
+}
+
+.section{
+  
+  .section-card {
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+

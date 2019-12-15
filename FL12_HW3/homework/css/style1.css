@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgba(14, 14, 14, 0.667);
+}
+
+header {
+  background-image: url(../img/m-h-day.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  border-bottom-right-radius: 700px 250px;
+}
+
+header .header-wrap {
+  height: 700px;
+  padding: 15px 0 0 180px;
+  width: 500px;
+}
+
+header .landing-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .landing-logo p {
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Hind";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .landing-logo span {
+  font-size: 10px;
+  margin: 0 auto;
+  font-size: 11px;
+  line-height: 0;
+}
+
+header .landing-logo img {
+  height: 40px;
+  width: 40px;
+}
+
+header .header_heading {
+  margin: 30px 0 30px 0;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+header .header_heading::before {
+  content: 'awesome';
+  background-color: #00a2cb;
+  padding-bottom: 17px;
+  line-height: 0.4;
+  position: absolute;
+  top: 156px;
+}
+
+header .header_text {
+  text-align: left;
+  width: 560px;
+  font-family: "Hind";
+  margin-bottom: 40px;
+}
+
+header .header_button {
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #70a701;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+header .login {
+  padding-left: 100px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.section_text {
+  color: #000;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.section_text::before {
+  background-color: #00a2cb;
+  content: 'adventure';
+  position: absolute;
+  bottom: -30px;
+  left: 960px;
+  padding-top: 12px;
+  line-height: 1;
+}
+
+.section .section-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style1.css.map */
