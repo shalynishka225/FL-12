@@ -5,6 +5,10 @@
   color: rgba(14, 14, 14, 0.667);
 }
 
+body {
+  background-color: #fff;
+}
+
 header {
   background-image: url(../img/m-h-day.jpg);
   background-repeat: no-repeat;
@@ -104,16 +108,178 @@ header .login {
   background-color: #00a2cb;
   content: 'adventure';
   position: absolute;
-  bottom: -30px;
-  left: 960px;
+  bottom: 310px;
+  left: 966px;
   padding-top: 12px;
   line-height: 1;
 }
 
-.section .section-card {
+.section_card {
+  background-color: #20222c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1090px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.section_card .section_card_img {
+  padding: 15px;
+  background-size: cover;
+  background-position: center;
+  width: 40%;
+  border-radius: 14px;
+}
+
+.section_card .section_card_right_container {
+  width: 60%;
+}
+
+.section_card .section_for_extend, .section_card .section_card_heading, .section_card .section_card_text, .section_card .section_link {
+  color: #fff;
+  text-align: center;
+}
+
+.section_card .section_card_heading {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Hind";
+  padding-top: 50px;
+}
+
+.section_card .section_card_text {
+  text-align: justify;
+  opacity: 0.7;
+  font-family: "Hind";
+  padding: 30px 80px 30px 80px;
+}
+
+.section_card .section_link {
+  opacity: 0.7;
+  font-family: "Source Sans Pro";
+  padding-left: 285px;
+  padding-bottom: 20px;
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: #20222c;
+  font-family: "Hind";
+}
+
+.footer .footer_for_extend {
+  width: 30%;
+  margin-top: 120px;
+  color: #fff;
+}
+
+.footer .footer_text {
+  text-align: center;
+  width: 350px;
+  padding-left: 700px;
+  text-align: justify;
+  color: #fff;
+}
+
+.footer .footer-cr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .landing-logo {
+  padding: 100px 0 0 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .landing-logo p {
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Hind";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .landing-logo span {
+  font-size: 10px;
   margin: 0 auto;
+  font-size: 11px;
+  line-height: 0;
+}
+
+.footer .landing-logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.footer .landing-logo p, .footer .landing-logo span {
+  color: #fff;
+}
+
+.section_banner {
+  background-image: -webkit-gradient(linear, left top, right top, from(#4a9e01), to(#3649d5));
+  background-image: linear-gradient(to right, #4a9e01, #3649d5);
+  height: 150px;
+  width: 1200px;
+  border-radius: 5px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -75px;
+  z-index: 1;
+  position: relative;
+}
+
+.section_banner .section_banner_heading {
+  padding-left: 40px;
+  padding-top: 40px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.section_banner .section_banner_heading:before {
+  content: 'start';
+  background-color: #00a2cb;
+  line-height: 1;
+  position: absolute;
+  top: 33px;
+  left: 125px;
+  padding-top: 10px;
+}
+
+.section_banner .section_banner_text {
+  font-size: 12px;
+  opacity: 0.8;
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 40px;
+  font-family: "Hind";
+}
+
+.section_banner_button {
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #70a701;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  position: absolute;
+  top: 60px;
+  right: 120px;
 }
 /*# sourceMappingURL=style1.css.map */

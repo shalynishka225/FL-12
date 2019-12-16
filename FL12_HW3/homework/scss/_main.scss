@@ -8,28 +8,7 @@
   border-radius: 3px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: map-get($font-family, header), sans-serif;
-  color: rgba(14, 14, 14, 0.667);
-}
-
-header{
-  background-image: $bg-image;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  border-bottom-right-radius: 700px 250px;
-
-  .header-wrap {
-    height: 700px;
-    padding: 15px 0 0 180px;
-    width: 500px;
-  }
-
-  .landing-logo {
+@mixin logo {
     display: flex;
 
     p {
@@ -52,6 +31,34 @@ header{
       height: 40px;
       width: 40px;
     }
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: map-get($font-family, header), sans-serif;
+  color: rgba(14, 14, 14, 0.667);
+}
+
+body{  background-color: $bg-color;}
+
+header{
+  background-image: $bg-image;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  border-bottom-right-radius: 700px 250px;
+
+  .header-wrap {
+    height: 700px;
+    padding: 15px 0 0 180px;
+    width: 500px;
+  }
+
+  .landing-logo {
+    @include logo;
   } 
 
   .header_heading {
@@ -83,7 +90,7 @@ header{
 
   .login {
     padding-left: 100px;
-    color: #fff;
+    color:$bg-color;
     font-size: 18px;
     font-weight: $font-weight;
   }
@@ -101,27 +108,147 @@ header{
     background-color: $bg-content;
     content: 'adventure';
     position: absolute;
-    bottom: -30px;
-    left: 960px;
+    bottom: 310px;
+    left: 966px;
     padding-top: 12px;
     line-height: 1;
   }
 }
 
-.section{
-  
-  .section-card {
+
+  .section_card {
+    background-color: $bg-section;
     display: flex;
-    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1090px;
+    height: 300px;
+    border-radius: 5px;
+
+    .section_card_img {
+      padding: 15px;
+      background-size: cover;
+      background-position: center;
+      width: 40%;
+      border-radius: 14px;
+    }
+
+    .section_card_right_container {
+      width: 60%;
+    }
+
+    .section_for_extend{
+      color: $bg-color;
+      text-align: center;
+    }
+
+    .section_card_heading {
+      @extend .section_for_extend;
+      font-weight: bold;
+      font-size: 18px;
+      font-family: map-get($font-family, body);
+      padding-top: 50px;
+    }
+
+    .section_card_text {
+      @extend .section_for_extend;
+      text-align: justify;
+      opacity: 0.7;
+      font-family: map-get($font-family, body);
+      padding: 30px 80px 30px 80px;
+
+    }
+
+    .section_link {
+      @extend .section_for_extend;
+      opacity: 0.7;
+      font-family: map-get($font-family, link);
+      padding-left: 285px;
+      padding-bottom: 20px;
+    }
   }
+
+  .footer {
+    width: 100%;
+    height: 200px;
+    background-color: $bg-section;
+    font-family: map-get($font-family, body);
+
+    .footer_for_extend {
+      width: 30%;
+      margin-top: 120px;
+      color: $bg-color;
+    }
+
+    .footer_text {
+      text-align: center;
+      width: 350px;
+      padding-left: 700px;
+      text-align: justify;
+      color: $bg-color;
+    }
+
+    .footer-cr{
+      display: flex;
+    }
+
+      .landing-logo{
+        padding: 100px 0 0 120px;
+        @include logo;
+        p,span{
+          color: $bg-color;
+        }
+      }
+
+  }
+
+  .section_banner {
+    background-image: $bg-gradient;
+    height: 150px;
+    width: 1200px;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -75px;
+    z-index: 1;
+    position: relative;
+
+    .section_banner_heading {
+      padding-left: 40px;
+      padding-top: 40px;
+      font-size: 22px;
+      font-weight: $font-weight;
+      color: $main-text-color;
+
+      &:before {
+        content: 'start';
+        background-color: $bg-content;
+        line-height: 1;
+        position: absolute;
+        top: 33px;
+        left: 125px;
+        padding-top: 10px;
+      }
+    }
+
+    .section_banner_text {
+      font-size: 12px;
+      opacity: 0.8;
+      color: $bg-color;
+      padding-top: 10px;
+      padding-left: 40px;
+      font-family: map-get($font-family, body);
+    }
+  }
+
+  .section_banner_button {
+    @include join-btn; 
+    position: absolute;
+    top: 60px;
+    right: 120px;
 }
 
 
-
-
-
-
-
-
-
-
+  
