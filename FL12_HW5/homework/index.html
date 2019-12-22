@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,19 +14,20 @@
   </head>
   <body>
     <header>
+      <div class="burger-menu">
+        <span class="burger-menu-lines"></span>
+      </div>
       <nav>
-        <ul class="nav">
-          <div class="logo">
-            <li>
-              <a href="#">Travel<span>Blog</span></a>
-            </li>
-          </div>
-          <div class="nav-bar">
+        <ul class="nav logo nav-bar">
+          <li>
+            <a href="#">Travel<span>Blog</span></a>
+          </li>
+          
             <li><a href="#">Blog</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Archive</a></li>
             <li><a href="#">Contact</a></li>
-          </div>
+          
         </ul>
       </nav>
     </header>
@@ -47,6 +48,10 @@
       <section class="main-content">
         <section class="content">
           <div class="block">
+            <div class="data-right">
+              <span class="day">07</span>
+              <span class="month">mar</span>
+            </div>
             <div class="img-1 image"></div>
             <div class="description post-1">
               <h1>
@@ -61,6 +66,10 @@
             </div>
           </div>
           <div class="block">
+            <div class="data-left">
+              <span class="day">06</span>
+              <span class="month">mar</span>
+            </div>
             <div class="description post-2">
               <h1>
                 Amazing travel blog
@@ -75,6 +84,10 @@
             <div class="img-2 image"></div>
           </div>
           <div class="block">
+            <div class="data-right">
+              <span class="day">04</span>
+              <span class="month">mar</span>
+            </div>
             <div class="img-3 image"></div>
             <div class="description post-3">
               <h1>
@@ -89,6 +102,10 @@
             </div>
           </div>
           <div class="block">
+            <div class="data-left">
+              <span class="day">01</span>
+              <span class="month">mar</span>
+            </div>
             <div class="title description post-4">
               <h1>
                 With amazing regions
@@ -102,10 +119,64 @@
             </div>
             <div class="img-4 image"></div>
           </div>
+          <section class="last-post">
+            <div class="data-right">
+              <span class="day">01</span>
+              <span class="month">mar</span>
+            </div>
+            <h1>
+              And again - it's totally amazing
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              consectetur, expedita quae porro at quo iste repellat
+              reprehenderit hic cum deleniti, vitae nulla itaque consequatur
+              velit quas quia? Expedita, voluptatibus.
+            </p>
+          </section>
         </section>
-        <aside class="aside"></aside>
+        <aside class="aside">
+          <section class="news">
+            <div class="img-5"></div>
+            <h1>
+              This is the first news on blog
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              consectetur, expedita quae porro at quo iste repellat
+              reprehenderit hic cum deleniti, vitae nulla itaque consequatur
+              velit quas quia? Expedita, voluptatibus.
+            </p>
+          </section>
+          <section class="news">
+            <div class="img-6"></div>
+            <h1>
+              With amazing regions
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              consectetur, expedita quae porro at quo iste repellat
+              reprehenderit hic cum deleniti, vitae nulla itaque consequatur
+              velit quas quia? Expedita, voluptatibus.
+            </p>
+          </section>
+        </aside>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer-info">
+        <p>Copyright 2018, Epam systems</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+          reiciendis.
+        </p>
+      </div>
+      <div class="author-info">
+        <p>
+          Design by
+          <span>Shevchuk Artem</span>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
