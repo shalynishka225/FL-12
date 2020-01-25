@@ -1,0 +1,67 @@
+/* 
+
+.folder, .file {
+  display: inline-block;
+  width: 100%;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+}
+
+#root span:hover {
+  background-color: #e6e6e6;
+}
+
+.hide > div, .hide > span.empty {
+  display: none;
+}
+
+.folder > div, span.ph  {
+  margin-left: 10px;
+}
+
+span.empty {
+  font-style: italic;
+} */
+
+
+ul {
+  list-style-type:none;
+}
+
+.folder i {
+  color: rgb(235, 193, 28);
+}
+
+.material-icons {
+  vertical-align: bottom;
+}
+
+.empty {
+  font-style: italic;
+}
+
+
+.file i {
+  color: rgb(167, 167, 167);
+}
+
+.folder, .empty {
+  cursor: pointer;
+}
+
+.closed {
+  display: none;
+}
+
+.open {
+  display: block;
+}
+
+.folder:hover, .file:hover, .empty:hover {
+  background-color: #ebebeb;
+}
