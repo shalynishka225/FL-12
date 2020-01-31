@@ -61,66 +61,103 @@
 	top:1px;
 }
 
-#root {
-  clear: both;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 81.25em;
-  padding: 0 2.5rem;
-}
-
 .UIContainer {
-  clear: both;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 81.25em;
-  padding: 0 2.5rem;
-}
-
-.createSetPage {
   padding: 1.25rem 0;
+  width: 80%;
+  margin: 0 auto;
+  border:1px solid rgb(175, 175, 175,0.5);
+  box-shadow: slategrey;
   position: relative;
   box-shadow: 0 0.125rem 1rem 0 rgba(0,0,0,.2);
+  margin-top: 1rem;
 }
 
-.createSetPage:after, .createSetPage:before {
-  content: "";
-  display: table;
+.formHeader{
+  padding: 1rem;
+  border-bottom: 1.5px solid rgb(160, 160, 160, 0.3);
 }
 
-.itemToolBar {
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: .75rem;
-  border-bottom: 2px solid #f0f0f0;
+.formHeaderItems {
   display: flex;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  transition: all .12s ease;
   flex-direction: row;
-  align-items: flex-end;
+  align-content: center;
   justify-content: space-between;
 }
 
-.itemToolBarCounter {
-  width: 2.5rem;
-  color: #97a5aa;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: .0875rem;
-  line-height: 1.5;
+.formCounter {
+  display: flex;
+  justify-self: flex-end;
 }
 
-.itemToolBarDone{
+.counter {
   display: flex;
-  flex: 0 1 auto;
-  width: 4rem;
+  -webkit-align-items: center;
+  font-size: 1.5em;
+  color: rgb(85, 84, 84,0.7);
+  font-weight: 900;
 }
 
-.itemToolBarRemove{
-  display: flex;
+.removeButton {
+  margin-left: auto;
 }
 
-.contextToggle {
-  display: flex;
+.changeButton {
+  margin-left: 10px;
 }
+
+.formCheckBox {
+  position: relative;
+  top: -45px;
+  right: -10px;
+}
+
+.formCheckBox input {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.formContext {
+  padding: 1rem;
+}
+
+.formContextItems {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.wordField, .definitionField{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.wordInput, .definitionInput {
+  text-decoration: none;
+  border: none;
+  border-bottom: 2px solid rgb(66, 66, 66);
+  outline: none;
+  width: 100%;
+  height: 30px;
+  
+}
+
+.wordInput:focus, .definitionInput:focus {
+  border-bottom: 2px solid #4EA1D7;
+}
+
+.definitionLabel, .wordLabel {
+  color: rgb(85, 84, 84,0.7);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+

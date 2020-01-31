@@ -1,91 +1,120 @@
 const root = document.getElementById('root');
+let objArray = [];
+let id = 1;
 
-const createForm = () => {
-  const counter = 1;
-  const container = document.createElement('div');
-  container.classList.toggle('UIContainer');
-  const createSetPage = document.createElement('div');
-  createSetPage.classList.toggle('createSetPage');
-  const items = document.createElement('div');
-  items.classList.toggle('items');
+const createForm = (id, word, definition,chbox) => {
 
-  const itemToolBar = document.createElement('div');
-  itemToolBar.classList.toggle('itemToolBar');
-  const itemToolBarCounter = document.createElement('span');
-  itemToolBarCounter.classList.toggle('itemToolBarCounter');
-  itemToolBarCounter.innerText = counter;
-  const itemToolBarDone = document.createElement('input');
-  itemToolBarDone.classList.toggle('itemToolBarDone');
-  itemToolBarDone.setAttribute('type', 'checkbox');
-  const itemToolBarRemove = document.createElement('div');
-  itemToolBarRemove.classList.toggle('itemToolBarRemove');
-  const contextToggle = document.createElement('span');
-  contextToggle.classList.toggle('contextToggle');
-  contextToggle.innerText = 'Удалить';
+  const UIContainer = document.createElement('div');
+  const formHeader = document.createElement('div');
+  const formHeaderItems = document.createElement('div');
+  const formCounter = document.createElement('div');
+  const counter = document.createElement('span');
+  const removeButton = document.createElement('div');
+  const removeButtonA = document.createElement('a');
+  const changeButton = document.createElement('div');
+  const changeButtonA = document.createElement('a');
+  const formCheckBox = document.createElement('div');
+  const checkBox = document.createElement('input');
+  const formContext = document.createElement('div');
+  const formContextItems = document.createElement('div');
+  const wordField = document.createElement('div');
+  const wordInput = document.createElement('input');
+  const wordLabel = document.createElement('label');
+  const definitionField = document.createElement('div');
+  const definitionInput = document.createElement('input');
+  const definitionLabel = document.createElement('label');
 
-  const contentPadding = document.createElement('div');
-  contentPadding.classList.toggle('content-padding');
-  const contentSides = document.createElement('div');
-  contentSides.classList.toggle('content-sides');
+  UIContainer.classList.toggle('UIContainer');
+  formHeader.classList.toggle('formHeader');
+  formHeaderItems.classList.toggle('formHeaderItems');
+  formCounter.classList.toggle('formCounter');
+  counter.classList.toggle('counter');
+  removeButton.classList.toggle('removeButton');
+  removeButtonA.classList.toggle('myButton');
+  changeButton.classList.toggle('changeButton');
+  changeButtonA.classList.toggle('myButton');
+  formCheckBox.classList.toggle('formCheckBox');
+  checkBox.classList.toggle('checkbox');
+  formContext.classList.toggle('formContext');
+  formContextItems.classList.toggle('formContextItems');
+  wordField.classList.toggle('wordField');
+  wordInput.classList.toggle('wordInput');
+  wordLabel.classList.toggle('wordLabel');
+  definitionField.classList.toggle('definitionField');
+  definitionInput.classList.toggle('definitionInput');
+  definitionLabel.classList.toggle('definitionLabel');
 
-  const contentSideWord = document.createElement('div');
-  contentSideWord.classList.toggle('wordSide');
-  const wordSpecialTextArea = document.createElement('div');
-  wordSpecialTextArea.classList.toggle('wordSpecialTextArea');
-  const wordTextArea = document.createElement('label');
-  wordTextArea.classList.toggle('wordTextArea');
-  const wordTextAreaContent = document.createElement('div');
-  wordTextAreaContent.classList.toggle('wordTextAreaContent');
-  const wordTextAreaBorder = document.createElement('span');
-  wordTextAreaBorder.classList.toggle('wordTextAreaBorder');
-  const wordTextAreaLabel = document.createElement('span');
-  wordTextAreaLabel.classList.toggle('wordTextAreaLabel');
+  root.appendChild(UIContainer);
+  UIContainer.appendChild(formHeader);
+  formHeader.appendChild(formHeaderItems);
+  formHeaderItems.appendChild(formCounter);
+  formCounter.appendChild(counter);
+  formHeaderItems.appendChild(removeButton);
+  removeButton.appendChild(removeButtonA)
+  formHeaderItems.appendChild(changeButton);
+  changeButton.appendChild(changeButtonA);
+  formHeaderItems.appendChild(formCheckBox);
+  formCheckBox.appendChild(checkBox);
 
-  const contentSideDefinition = document.createElement('div');
-  contentSideDefinition.classList.toggle('definitionSide');
-  const definitionSpecialTextArea = document.createElement('div');
-  definitionSpecialTextArea.classList.toggle('definitionSpecialTextArea');
-  const definitionTextArea = document.createElement('label');
-  definitionTextArea.classList.toggle('definitionTextArea');
-  const definitionTextAreaContent = document.createElement('div');
-  definitionTextAreaContent.classList.toggle('definitionTextAreaContent');
-  const definitionTextAreaBorder = document.createElement('span');
-  definitionTextAreaBorder.classList.toggle('definitionTextAreaBorder');
-  const definitionTextAreaLabel = document.createElement('span');
-  definitionTextAreaLabel.classList.toggle('definitionTextAreaLabel');
+  UIContainer.appendChild(formContext);
+  formContext.appendChild(formContextItems);
+  formContextItems.appendChild(wordField);
+  wordField.appendChild(wordInput);
+  wordField.appendChild(wordLabel);
+  formContextItems.appendChild(definitionField);
+  definitionField.appendChild(definitionInput);
+  definitionField.appendChild(definitionLabel);
 
-  root.appendChild(container);
-  container.appendChild(createSetPage);
-  createSetPage.appendChild(items);
-  items.appendChild(itemToolBar);
-  itemToolBar.appendChild(itemToolBarCounter);
-  itemToolBar.appendChild(itemToolBarDone);
-  itemToolBar.appendChild(itemToolBarRemove);
-  itemToolBarRemove.appendChild(contextToggle);
-  items.appendChild(contentPadding);
-  contentPadding.appendChild(contentSides);
-  contentSides.appendChild(contentSideWord);
-  contentSideWord.appendChild(wordSpecialTextArea);
-  wordSpecialTextArea.appendChild(wordTextArea);
-  wordTextArea.appendChild(wordTextAreaContent);
-  wordTextAreaContent.appendChild(wordTextAreaBorder);
-  wordTextAreaContent.appendChild(wordTextAreaLabel);
+  counter.innerText = id;
+  removeButtonA.innerText = 'Удалить';
+  changeButtonA.innerText = 'Изменить';
+  checkBox.setAttribute('type','checkbox');
+  wordInput.setAttribute('type','text');
+  wordInput.id = 'wordArea';
+  wordInput.setAttribute('name', 'word');
+  wordLabel.setAttribute('for', 'word');
+  wordLabel.innerText= 'термин';
+  definitionInput.setAttribute('type','text');
+  definitionInput.setAttribute('name', 'definition');
+  definitionInput.id = 'definitionArea';
+  definitionLabel.setAttribute('for', 'definition');
+  definitionLabel.innerText = 'определение';
+  checkBox.checked = chbox;
+  removeButtonA.setAttribute('onclick' , 'removeForm(event)');
 
-  contentSides.appendChild(contentSideDefinition);
-  contentSideDefinition.appendChild(definitionSpecialTextArea);
-  definitionSpecialTextArea.appendChild(definitionTextArea);
-  definitionTextArea.appendChild(definitionTextAreaContent);
-  definitionTextAreaContent.appendChild(definitionTextAreaBorder);
-  definitionTextAreaContent.appendChild(definitionTextAreaLabel);
-
-
-
-  
-
-
-
-
+  return UIContainer;
 }
 
-createForm();
+const createObj = (id, word, def, chbox) => {
+  return {
+    id, word, def, chbox
+  }
+}
+
+const create = document.getElementById('createButton');
+
+create.addEventListener('click' , () => {
+  //createObj(id,'','',false);
+  //console.log(createObj(id,'','',false));
+  createForm(id,'','',false);
+  id++;
+  readInput;
+  console.log(readInput());
+});
+
+const removeForm = (event) => {
+  event.target.closest('.UIContainer').remove();
+}
+
+const readInput = () => {
+  const allforms = document.querySelectorAll('.UIContainer');
+  
+    return allforms.map(oneForm => ({
+      word: oneForm.querySelector('.wordInput').value,
+      def: oneForm.querySelector('.definitionInput').value      
+    }))
+}
+
+
+
 
