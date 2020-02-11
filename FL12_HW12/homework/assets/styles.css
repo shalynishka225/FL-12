@@ -1,163 +1,133 @@
 *{
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+.page {
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+}
+
+.active{
+  display: block;
+}
+
+#home{
+  background-color: darkslateblue;
+}
+
+#list{
+  background-color: steelblue;
+}
+
+#detail{
+  background-color: coral;
+}
+
+h1{
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.big{
+  font-size: 5rem;
+  font-weight: 900;
 }
 
 .wrapper {
-  width: 100%;
-  height: 110px;
-  background-color: #4D4D4D;
-}
-
-.hederContainer {
-  width: 70%;
-  height: 100%;
+  width: 85%;
+  height: 20rem;
+  background-color: brown;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
 }
 
-.hederLogo {
-  height: 100%;
-  max-width: 100vh;
-  font-size: 2.4vw;
-  font-weight: 900;
-  justify-content: center;
-  -webkit-text-stroke: 0.5px;
-  -webkit-text-stroke-color: rgb(255, 255, 255);
-  display: block;
-  letter-spacing: .0875rem;
-}
-
-.headerSection {
-  width: 100vh;
+.wrapper-header {
+  width: 100%;
+  height: 5rem;
+  background-color: cadetblue;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.myButton {
-	box-shadow:inset 0px 1px 0px 0px #bee2f9;
-	background:linear-gradient(to bottom, #63d9ee 5%, #468ccf 100%);
-	background-color:#63b8ee;
-	border-radius:6px;
-	border:1px solid #3866a3;
-	display:inline-block;
-	cursor:pointer;
-	color:#14396a;
-	font-family:Arial;
-	font-size:25px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #7cacde;
-}
-.myButton:hover {
-	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
-	background-color:#468ccf;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-
-.UIContainer {
-  padding: 1.25rem 0;
-  width: 80%;
-  margin: 0 auto;
-  border:1px solid rgb(175, 175, 175,0.5);
-  box-shadow: slategrey;
-  position: relative;
-  box-shadow: 0 0.125rem 1rem 0 rgba(0,0,0,.2);
-  margin-top: 1rem;
-}
-
-.formHeader{
-  padding: 1rem;
-  border-bottom: 1.5px solid rgb(160, 160, 160, 0.3);
-}
-
-.formHeaderItems {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-}
-
-.formCounter {
-  display: flex;
-  justify-self: flex-end;
-}
-
-.counter {
-  display: flex;
-  -webkit-align-items: center;
-  font-size: 1.5em;
-  color: rgb(85, 84, 84,0.7);
-  font-weight: 900;
-}
-
-.removeButton {
-  margin-left: auto;
-}
-
-.changeButton {
-  margin-left: 10px;
-}
-
-.formCheckBox {
-  position: relative;
-  top: -45px;
-  right: -10px;
-}
-
-.formCheckBox input {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.formContext {
-  padding: 1rem;
-}
-
-.formContextItems {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.wordField, .definitionField{
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-}
-
-.wordInput, .definitionInput {
-  text-decoration: none;
-  border: none;
-  border-bottom: 2px solid rgb(66, 66, 66);
+.button {
+  width: 5rem;
+  height: 3rem;
+  border-radius: 0.4rem;
   outline: none;
-  width: 100%;
-  height: 30px;
-  
+  box-shadow: none;
+  border-style: none;
+  background-color: darksalmon;
+  color: white;
+  border: 2px solid silver;
+  margin: 10px;
+  cursor: pointer;
 }
 
-.wordInput:focus, .definitionInput:focus {
-  border-bottom: 2px solid #4EA1D7;
+.button:hover {
+  background-color: tomato;
 }
 
-.definitionLabel, .wordLabel {
-  color: rgb(85, 84, 84,0.7);
+.wrapper-content {
+  margin: 2rem;
+  display: flex;
+  width: 90%;
+  height: 10rem;
+  background-color: wheat;
+  justify-content: space-between;
+
+}
+
+label{
+ display: block;
+ font-size: 1.2rem;
+ color: slategrey;
+}
+
+.word-content,  .defenition-content{
+  margin: 2rem;
+  align-content: center;
+  justify-content: center;
+}
+
+.word-content input, .defenition-content input {
+  outline: none;
+  border: none;
+  height: 2rem;
+  font-size: 20px;
+  background-color: wheat;
+  border-bottom: 2px solid silver;
+}
+
+.word-content input:focus, .defenition-content input:focus{
+  border-bottom: 2px solid tomato;
+}
+
+.task {
+  width: 90%;
+  height: 70px;
+  background-color: tomato;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.task-content {
+  margin-left: 1rem;
+}
+
+.task-content span{
+  display: block;
+  margin: 0.5rem;
   font-size: 20px;
   font-weight: 900;
 }
-
-
-
-
-
-
-
 
 
 

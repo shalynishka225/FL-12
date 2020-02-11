@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Homework 12 - Simple TODO List</title>
-  <link rel="stylesheet" href="./assets/styles.css">
-</head>
-<body>
-  <header>
-    <div class="wrapper">
-      <div class="hederContainer">
-        <div class="headerSection">
-          <div class="button">
-             <a href="#" class="myButton" id="createButton">Создать</a>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework 12 - Simple TODO List</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="page active" id="home">
+        <h1>Ваши таски</h1>
+        <input
+          href="#"
+          type="button"
+          value="Создать"
+          id="create-button"
+          class="button nav-link"
+          data-target="list"
+        />
+        <div class="root" id="root"></div>
+      </div>
+      <div class="page" id="list">
+        <h1>Создание тасков</h1>
+        <div class="wrapper">
+          <div class="wrapper-header">
+            <input
+              type="button"
+              value="Сохранить"
+              class="button nav-link"
+              data-target="home"
+              id="save-btn"
+            />
+            <input
+              type="button"
+              value="Отменить"
+              class="button nav-link"
+              data-target="home"
+            />
+          </div>
+          <div class="wrapper-content">
+            <div class="word-content">
+              <input type="text" name="word" id="word" />
+              <label for="word">Термин</label>
+            </div>
+            <div class="defenition-content">
+              <input type="text" name="defenition" id="defenition" />
+              <label for="defenition">Определение</label>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <div id="root">
-    <!-- <div class="UIContainer">
-      <div class="formHeader">
-        <div class="formHeaderItems">
-          <div class="formCounter">
-            <span class="counter">1</span>
-          </div>
-          <div class="removeButton">
-            <a href="#" class="myButton">Удалить</a>
-          </div>
-          <div class="changeButton">
-            <a href="#" class="myButton">Изменить</a>
-          </div>
-          <div class="formCheckBox">
-            <input type="checkbox" name="" id="" class="checkbox">
-          </div>
-        </div>
+      <div class="page" id="detail">
+        <h1>Detail</h1>
+        <ol>
+          <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
+          <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
+          <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
+        </ol>
       </div>
-      <div class="formContext">
-        <div class="formContextItems">
-          <div class="wordField">
-            <input type="text" name="word" id="" class="wordInput">
-            <label for="word" class="wordLabel">термин</label>
-          </div>
-          <div class="definitionField">
-            <input type="text" name="definition" id="" class="definitionInput">
-            <label for="defenition" class="definitionLabel">определение</label>
-          </div>
-        </div>
-      </div>
-    </div> -->
-  </div>
+    </main>
 
-  <script src="./src/app.js"></script>
-</body>
+    <script src="./src/app.js"></script>
+  </body>
 </html>
