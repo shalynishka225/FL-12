@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.nav-link:hover {
+  background-color: #2A74BF;
+}
+.container--row {
+  border-bottom: 2px solid #2A74BF;
+}
+h1,
+h5 {
+  color: #2A74BF;
+  font-weight: bold!important;
+}
+.card--cardio-body {
+  background-color: #D7514C;
+}
+.card--cardio {
+  border: 1px solid #D7514C !important;
+}
+.card--fitness-body {
+  background-color: #2A74BF;
+}
+.card--fitness {
+  border: 1px solid #2A74BF !important;
+}
+.card--zumba-body {
+  background-color: #D8C11D;
+}
+.card--zumba {
+  border: 1px solid #D8C11D !important;
+}
+.card--bootcamp-body {
+  background-color: #4D944B;
+}
+.card--bootcamp {
+  border: 1px solid #4D944B !important;
+}
+.footer {
+  background-color: #666;
+}
